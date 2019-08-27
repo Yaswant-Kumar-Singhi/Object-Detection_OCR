@@ -62,7 +62,7 @@ def load_image_into_numpy_array(image):
 PATH_TO_TEST_IMAGES_DIR = 'test_images/'
 TEST_IMAGE_PATHS = [ os.path.join(PATH_TO_TEST_IMAGES_DIR, 'image{}.jpg'.format(i)) for i in range(5, 6) ]
 IMAGE_SIZE = (12, 8)
-TEST_DHARUN=os.path.join('numplate')
+TEST_YASWANT=os.path.join('numplate')
 count = 0
 
 
