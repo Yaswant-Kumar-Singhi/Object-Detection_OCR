@@ -59,7 +59,7 @@ def load_image_into_numpy_array(image):
       (im_height, im_width, 3)).astype(np.uint8)
 
 
-PATH_TO_TEST_IMAGES_DIR = 'png_tesseract/test_ram'
+PATH_TO_TEST_IMAGES_DIR = 'test_images/'
 TEST_IMAGE_PATHS = [ os.path.join(PATH_TO_TEST_IMAGES_DIR, 'image{}.jpg'.format(i)) for i in range(5, 6) ]
 IMAGE_SIZE = (12, 8)
 TEST_DHARUN=os.path.join('numplate')
@@ -94,7 +94,7 @@ with detection_graph.as_default():
     
       config = ('-l eng --oem 1 --psm 3')
         
-      filename = yo_make_the_conversion(img_data, count)
+      filename = dic.yo_make_the_conversion(img_data, count)
       print(filename)
       pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files (x86)\Tesseract-OCR"
       pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files (x86)\Tesseract-OCR\tesseract.exe"
@@ -113,7 +113,7 @@ with detection_graph.as_default():
           line_thickness=8)
       
       
-      plt.figure(figsize=IMAGE_SIZE)
+      #plt.figure(figsize=IMAGE_SIZE)
       plt.imshow(img_data)
       plt.show()
 
