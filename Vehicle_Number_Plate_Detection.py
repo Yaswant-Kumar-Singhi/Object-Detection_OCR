@@ -100,7 +100,7 @@ with detection_graph.as_default():
       pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files (x86)\Tesseract-OCR\tesseract.exe"
       text = pytesseract.image_to_string(Image.open(filename),lang=None)
       #text = image_to_string(filename, config=config)
-      text = pytesseract.image_to_string(Image.open(filename))
+      #text = pytesseract.image_to_string(Image.open(filename))
       
       print('CHARCTER RECOGNITION : ',anv.catch_rectify_plate_characters(text))
       vis_util.visualize_boxes_and_labels_on_image_array(
